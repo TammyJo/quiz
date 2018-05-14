@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Quiz App Header -->
+    <string name="app_name">Chinese Quiz</string>
+    <string name="quiz_name">中文</string>
+    <string name="lesson_info">Lesson 3</string>
+    <string name="prompt_q1_q5">Questions 1 - 5: Select the best translation</string>
+
+    <!-- Question 1 -->
+    <string name="question1">1. I don\'t understand</string>
+    <string name="q1_opt1">我想你</string>
+    <string name="q1_opt2">我不懂</string>
+    <string name="q1_opt3">請問</string>
+
+    <!-- Question 2 -->
+    <string name="question2">2. Thank you</string>
+    <string name="q2_opt1">你好</string>
+    <string name="q2_opt2">不好</string>
+    <string name="q2_opt3">谢谢</string>
+
+    <!-- Question 3 -->
+    <string name="question3">3. Help!</string>
+    <string name="q3_opt1">救命！</string>
+    <string name="q3_opt2">谢谢！</string>
+    <string name="q3_opt3">买下来！</string>
+
+    <!-- Question 4 -->
+    <string name="question4">4. How much does it cost?</string>
+    <string name="q4_opt1">你当真？</string>
+    <string name="q4_opt2">多少钱?</string>
+    <string name="q4_opt3">你好吗？</string>
+
+    <!-- Question 5 -->
+    <string name="question5">5. What is today\'s date?</string>
+    <string name="q5_opt1">你说什么？</string>
+    <string name="q5_opt2">他在哪里？</string>
+    <string name="q5_opt3">今天几号？</string>
+
+    <!-- Prompt for checkbox questions -->
+    <string name="prompt_q6_q7">Questions 6 - 7: Select all that apply</string>
+
+    <!-- Question 6 -->
+    <string name="question6">6. \'to know\'</string>
+    <string name="q6_opt1">知道</string>
+    <string name="q6_opt2">相信</string>
+    <string name="q6_opt3">认识</string>
+    <string name="q6_opt4">了解</string>
+
+    <!-- Question 7 -->
+    <string name="question7">7. \'Sunday\'</string>
+    <string name="q7_opt1">星期一</string>
+    <string name="q7_opt2">星期日</string>
+    <string name="q7_opt3">星期天</string>
+
+    <!-- Prompt for free-text input question -->
+    <string name="prompt_q8">Question 8: Type the English translation</string>
+
+    <!-- Question 8 -->
+    <string name="question8">8. 我饿死了。</string>
+
+    <!-- Question 8 Response 1-->
+    <string name="question8_response1">I\'m hungry.</string>
+
+    <!-- Question 8 Response 2-->
+    <string name="question8_response2">I am hungry.</string>
+
+    <!-- Toast message -->
+    <string name="result_msg" formatted="false">You scored %2$d out of %x!</string>
+
+    <!-- Submit button text -->
+    <string name="submit_btn">Submit</string>
+
+    <!-- Wrong Answer Text -->
+    <string name="wrong">Wrong</string>
+
+    <!-- Correct Answer Text -->
+    <string name="correct">Correct</string>
+
+    <!-- Results summary line item-->
+    <string name="summary_item" formatted="false">Question %2$d : %1$s</string>
+
+    <!-- Email subject -->
+    <string name="email_subject">Chinese Quiz Results</string>
+
+</resources>
