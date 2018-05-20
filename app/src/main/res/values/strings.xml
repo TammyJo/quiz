@@ -66,7 +66,9 @@
     <string name="question8_response2">I am hungry.</string>
 
     <!-- Toast message -->
-    <string name="result_msg" formatted="false">You scored %2$d out of %x!</string>
+    <string name="pass_msg">Congratulations, you passed...</string>
+    <string name="fail_msg">Sorry, you did not pass...</string>
+    <string name="result_msg" formatted="false">You scored %2$d out of %x</string>
 
     <!-- Submit button text -->
     <string name="submit_btn">Submit</string>

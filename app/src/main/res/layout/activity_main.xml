@@ -4,16 +4,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.quiz.MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <LinearLayout style="@style/VerticalLinearLayout">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            style="@style/VerticalLinearLayout"
             android:background="#F4D03F"
-            android:orientation="vertical"
             android:padding="20dp">
 
             <!-- Dragon image at top of page -->
@@ -51,17 +46,12 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
+            style="@style/VerticalLinearLayout"
             android:padding="16dp">
 
             <!-- Instructions for q1 - q5 -->
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textSize="14sp"
+                style="@style/InstructionText"
                 android:fontFamily="sans-serif-light"
                 android:text="@string/prompt_q1_q5" />
 
@@ -73,46 +63,28 @@
                 android:layout_below="@+id/text">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="sans-serif"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
+                    style="@style/QuestionText"
                     android:text="@string/question1" />
 
                 <RadioButton
                     android:id="@+id/radio_q1_opt1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:textAppearanceMedium"
+                    style="@style/RadioButtonOption"
                     android:text="@string/q1_opt1" />
 
                 <RadioButton
                     android:id="@+id/radio_q1_opt2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:textAppearanceMedium"
+                    style="@style/RadioButtonOption"
                     android:text="@string/q1_opt2" />
 
                 <RadioButton
                     android:id="@+id/radio_q1_opt3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:textAppearanceMedium"
+                    style="@style/RadioButtonOption"
                     android:text="@string/q1_opt3" />
 
             </RadioGroup>
 
             <!-- Divider -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="16dp"
-                android:background="#D91E18" />
+            <View style="@style/Divider" />
 
             <!-- Question 2 -->
             <RadioGroup
@@ -121,46 +93,29 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="sans-serif"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
+                    style="@style/QuestionText"
                     android:text="@string/question2" />
 
                 <RadioButton
                     android:id="@+id/radio_q2_opt1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:textAppearanceMedium"
+                    style="@style/RadioButtonOption"
                     android:text="@string/q2_opt1" />
 
                 <RadioButton
                     android:id="@+id/radio_q2_opt2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:textAppearanceMedium"
+                    style="@style/RadioButtonOption"
+
                     android:text="@string/q2_opt2" />
 
                 <RadioButton
                     android:id="@+id/radio_q2_opt3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:textAppearanceMedium"
+                    style="@style/RadioButtonOption"
                     android:text="@string/q2_opt3" />
 
             </RadioGroup>
 
             <!-- Divider -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="16dp"
-                android:background="#D91E18" />
+            <View style="@style/Divider" />
 
             <!-- Question 3 -->
             <RadioGroup
@@ -169,46 +124,28 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="sans-serif"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
+                    style="@style/QuestionText"
                     android:text="@string/question3" />
 
                 <RadioButton
                     android:id="@+id/radio_q3_opt1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:textAppearanceMedium"
+                    style="@style/RadioButtonOption"
                     android:text="@string/q3_opt1" />
 
                 <RadioButton
                     android:id="@+id/radio_q3_opt2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:textAppearanceMedium"
+                    style="@style/RadioButtonOption"
                     android:text="@string/q3_opt2" />
 
                 <RadioButton
                     android:id="@+id/radio_q3_opt3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:textAppearanceMedium"
+                    style="@style/RadioButtonOption"
                     android:text="@string/q3_opt3" />
 
             </RadioGroup>
 
             <!-- Divider -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="16dp"
-                android:background="#D91E18" />
+            <View style="@style/Divider" />
 
             <!-- Question 4 -->
             <RadioGroup
@@ -217,46 +154,28 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="sans-serif"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
+                    style="@style/QuestionText"
                     android:text="@string/question4" />
 
                 <RadioButton
                     android:id="@+id/radio_q4_opt1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:textAppearanceMedium"
+                    style="@style/RadioButtonOption"
                     android:text="@string/q4_opt1" />
 
                 <RadioButton
                     android:id="@+id/radio_q4_opt2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:textAppearanceMedium"
+                    style="@style/RadioButtonOption"
                     android:text="@string/q4_opt2" />
 
                 <RadioButton
                     android:id="@+id/radio_q4_opt3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:textAppearanceMedium"
+                    style="@style/RadioButtonOption"
                     android:text="@string/q4_opt3" />
 
             </RadioGroup>
 
             <!-- Divider -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="16dp"
-                android:background="#D91E18" />
+            <View style="@style/Divider" />
 
             <!-- Question 5 -->
             <RadioGroup
@@ -265,170 +184,98 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="sans-serif"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
+                    style="@style/QuestionText"
                     android:text="@string/question5" />
 
                 <RadioButton
                     android:id="@+id/radio_q5_opt1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:textAppearanceMedium"
+                    style="@style/RadioButtonOption"
                     android:text="@string/q5_opt1" />
 
                 <RadioButton
                     android:id="@+id/radio_q5_opt2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:textAppearanceMedium"
+                    style="@style/RadioButtonOption"
                     android:text="@string/q5_opt2" />
 
                 <RadioButton
                     android:id="@+id/radio_q5_opt3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:textAppearanceMedium"
+                    style="@style/RadioButtonOption"
                     android:text="@string/q5_opt3" />
 
             </RadioGroup>
 
             <!-- Divider -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="16dp"
-                android:background="#D91E18" />
+            <View style="@style/Divider" />
 
             <!-- Instruction to select 1 or more answers -->
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textSize="14sp"
+                style="@style/InstructionText"
                 android:fontFamily="sans-serif-light"
                 android:text="@string/prompt_q6_q7" />
 
             <!-- Question 6 -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                style="@style/QuestionText"
                 android:text="@string/question6" />
 
             <CheckBox
                 android:id="@+id/checkbox_q6_opt1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:paddingLeft="4dp"
+                style="@style/CheckboxOption"
                 android:text="@string/q6_opt1" />
 
             <CheckBox
                 android:id="@+id/checkbox_q6_opt2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:paddingLeft="4dp"
+                style="@style/CheckboxOption"
                 android:text="@string/q6_opt2" />
 
             <CheckBox
                 android:id="@+id/checkbox_q6_opt3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:paddingLeft="4dp"
+                style="@style/CheckboxOption"
                 android:text="@string/q6_opt3" />
 
             <CheckBox
                 android:id="@+id/checkbox_q6_opt4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:paddingLeft="4dp"
+                style="@style/CheckboxOption"
                 android:text="@string/q6_opt4" />
 
             <!-- Divider -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="16dp"
-                android:background="#D91E18" />
+            <View style="@style/Divider" />
 
             <!-- Question 7 -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                style="@style/QuestionText"
                 android:text="@string/question7" />
 
             <CheckBox
                 android:id="@+id/checkbox_q7_opt1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:paddingLeft="4dp"
+                style="@style/CheckboxOption"
                 android:text="@string/q7_opt1" />
 
             <CheckBox
                 android:id="@+id/checkbox_q7_opt2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:paddingLeft="4dp"
+                style="@style/CheckboxOption"
                 android:text="@string/q7_opt2" />
 
             <CheckBox
                 android:id="@+id/checkbox_q7_opt3"
+                style="@style/CheckboxOption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:textAppearanceMedium"
                 android:paddingLeft="4dp"
-                android:text="@string/q7_opt3" />
+                android:text="@string/q7_opt3"
+                android:textAppearance="?android:textAppearanceMedium" />
 
             <!-- Divider -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="16dp"
-                android:background="#D91E18" />
+            <View style="@style/Divider" />
 
             <!-- Instruction to translate -->
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textSize="14sp"
-                android:fontFamily="sans-serif-light"
+                style="@style/InstructionText"
                 android:text="@string/prompt_q8" />
 
             <!-- Question 8 -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                style="@style/QuestionText"
                 android:text="@string/question8" />
 
             <EditText
@@ -441,18 +288,19 @@
                 android:id="@+id/submit_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
                 android:background="#CF000F"
-                android:textSize="24sp"
-                android:textColor="#F4D03F"
                 android:fontFamily="sans-serif"
+                android:onClick="submitQuiz"
                 android:text="@string/submit_btn"
-                android:onClick="submitQuiz" />
+                android:textColor="#F4D03F"
+                android:textSize="24sp" />
 
         </LinearLayout>
 
     </LinearLayout>
+
 </ScrollView>

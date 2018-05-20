@@ -6,7 +6,6 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Display;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Initialize the views when the app loads
      */
-    public void initializeViews(){
+    public void initializeViews() {
         q1CorrectAnswer = (RadioButton) findViewById(R.id.radio_q1_opt2);
         q2CorrectAnswer = (RadioButton) findViewById(R.id.radio_q2_opt3);
         q3CorrectAnswer = (RadioButton) findViewById(R.id.radio_q3_opt1);
@@ -61,17 +60,25 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Submit button is clicked
+     *
      * @param view
      */
     public void submitQuiz(View view) {
+        boolean pass;
         int score = calculateScore();
-        toastGrade(score);
+        if (score >= 8) {
+            pass = true;
+        } else {
+            pass = false;
+        }
+        toastGrade(score, pass);
         sendEmail(createResultsSummary());
     }
 
     /**
-     *  Calculate score
-     *  @return int score
+     * Calculate score
+     *
+     * @return int score
      */
     public int calculateScore() {
         // Store 0 for incorrect / 1 for correct for each question
@@ -122,14 +129,15 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Create a formatted summary of the results
+     *
      * @return String summary
      */
     private String createResultsSummary() {
         String resultsSummary = "";
-        for(int i=0; i<scorecard.length; i++){
-            int quesNumber = i+1;
+        for (int i = 0; i < scorecard.length; i++) {
+            int quesNumber = i + 1;
             String answerResult = getString(R.string.wrong); // default the answer to incorrect
-            if(scorecard[i] == 1){
+            if (scorecard[i] == 1) {
                 answerResult = getString(R.string.correct);
             }
             Resources res = getResources();
@@ -142,15 +150,25 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Display a toast with the quiz grade
+     *
      * @parama int score
      */
-    private void toastGrade(int score) {
+    private void toastGrade(int score, boolean pass) {
+        String finalMessage;
         @SuppressLint("StringFormatMatches") String msg = format(getString(R.string.result_msg), scorecard.length, score);
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        if (pass) {
+            String passMsg = format(getString(R.string.pass_msg));
+            finalMessage = passMsg + ' ' + msg;
+        } else {
+            String failMsg = format(getString(R.string.fail_msg));
+            finalMessage = failMsg + ' ' + msg;
+        }
+        Toast.makeText(this, finalMessage, Toast.LENGTH_SHORT).show();
     }
 
     /**
      * Send email with results
+     *
      * @param String messageBody
      */
     private void sendEmail(String messageBody) {
@@ -158,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
         intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_subject));
         intent.putExtra(Intent.EXTRA_TEXT, messageBody);
-        if(intent.resolveActivity(getPackageManager()) != null){
+        if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
     }
